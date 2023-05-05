@@ -1,0 +1,6 @@
+FROM apache2
+WORDIR /var/www/html/
+RUN  touch index.html
+RUN echo "this is container" > index.html
+EXPOSE 80
+CMD  ["httpd", "-d", "foreground;"]
